@@ -54,176 +54,86 @@
     --main-bg-color: #161616;
     --main-bg-color-light: rgb(217, 210, 210);
 
-    --seconday-bg-color: #1A1A1A;
+    --seconday-bg-color: #242424;;
 
     --font-grad-light: #C9C9C9;
     --font-grad-dark: #505050;
-    --secondary-font-color: #595757;
+
+    --primary-font-color: #aca2a2;
 
     --fs-primary: 2.0625em;
     --fs-secondary:1em;
+
+    --fs-discription: 14px;
+    --fs-mini-title:18px;
 
 }
 
 
 @media screen and (min-width: 1000px){
     *{   
-        --fs-primary: 2.5em;
-        --fs-secondary:1em;}
+        --fs-primary: 56px;
+        --fs-secondary:2em;
+    }
     }
 
-.primary-heading{
-    font-size: var(--fs-primary);
-    font-weight: 400;
-}
 
-.secondary-heading{
-    font-size: 1.7em;
-    font-weight: bold;
-}
+    .small_text{
+      font-size: var(--fs-discription);
+      color: var(--primary-font-color);
+    }
 
-.info-heading{
-    font-size: 1.5em;
-    color: var(--secondary-font-color);
-}
+    .primary-heading{
+      font-size: var(--fs-primary);
+      font-weight: bold;
+      background: -webkit-linear-gradient(to right,var(--font-grad-light), var(--font-grad-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.info-text{
-    font-size: var(--fs-secondary);
-    color: var(--secondary-font-color);
-}
+    .secondary-heading{
+      font-size: var(--fs-secondary);
+      font-weight: bold;
+      background: -webkit-linear-gradient(to right,var(--font-grad-light), var(--font-grad-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.contact-icons{
-   width: 1.5em ;
-   height: 1.5em ;
-   filter: grayscale(100%);
-   cursor: pointer;
-}
+    .discription-heading{
+      font-size: var(--fs-mini-title);
+      font-weight: bold;
+      background: -webkit-linear-gradient(to right,var(--font-grad-light), var(--font-grad-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.company-icon{
-    filter: grayscale(100%);
-    width: 20vw;
-}
-
-@media screen and (min-width: 680px){
     .company-icon{
-        width: 5vw;
+      width: 5em;
+      filter: grayscale(100%);
+      padding: 2em;
     }
-}
 
-
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
-    align-content: center;
-}
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
-
-}
-
-.container{
-    padding: 1em;
-}
-
-/* Custom css */
-
-.title{
-    background: -webkit-linear-gradient(left,#eee, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-body{
-    background-color: var(--main-bg-color);
-}
-
-/* NAVBAR */
-
-.contact>p{
-    padding-top: 0.1em;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.contact > img{
-    width: 2em;
-    height: 2em;
-    background-color: var(--font-grad-dark);
-    padding : 0.5em;
-    border-radius: 50%;
-}
-.contact:hover > p{
-    cursor: pointer;
-    color: var(--font-grad-light);
-    transition: 0.3s ease-in-out;
-}
-
-.nav-container{
-    border-bottom: 0.01px solid var(--font-grad-dark);
-}
-
-@media screen and (min-width: 680px){
-    .nav-container{
-        margin: auto;
-        max-width: 75vw;
+    .card{
+      background-color: var(--seconday-bg-color);
+      padding: 5em 1em 1em 0.5em;
+      margin: 0 0.5em 0.5em 0.5em;
+      height: 25%;
+      width: 45%;
     }
-}
-
-
-.intro-section{
-    height: 80vh;
-    justify-content: center;
-    gap: 1em;
-    align-content: space-around;
-    text-align: center;
-}
-
-@media screen and (min-width: 680px){
-    .intro-section{
-        margin: auto;
-        max-width: 30vw;
+    @media screen and (min-width: 1000px){
+      .card{   
+        height: 30%;
+        width: 15%;
+      }
     }
-}
 
-
-.intro-section > img{
-    align-self: center;
-    width: 200px;
-    filter: grayscale(100%);
-    border-radius: 50%;
-}
-
-
-.call-action{
-    margin-top: 2em;
-}
-.call-action > a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 1em 3em;
-    background-color: var(--seconday-bg-color);
-    color: var(--secondary-font-color);
-    border: 0.3px solid var(--secondary-font-color);
-    transition: transform 0.2s ease; 
-    
-}
-
-
-.call-action > a:active{
-    transform: scale(0.8);
-}
-
-.carousal{
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 3em;
-    overflow-y: auto;
-    padding: 2em;
-    background-color: var(--seconday-bg-color);
-    scrollbar-width: none
-}
-
+    .button{  
+      text-decoration: none;
+      cursor: pointer;
+      background-color: var(--seconday-bg-color);
+      color: var(--primary-font-color);
+      font-size: var(--fs-discription);
+      font-weight: 300;
+      padding: 2em 4em;
+      text-align: center;
+    }
